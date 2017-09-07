@@ -1,3 +1,5 @@
+/* Full-width input fields */
+
 input[type=text],
 input[type=password] {
     width: 100%;
@@ -41,6 +43,11 @@ button:hover {
     text-align: center;
     margin: 24px 0 12px 0;
     position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
 }
 
 .container {

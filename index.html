@@ -1,89 +1,284 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<html>
 
 <head>
-    <!-- scriptconnectfirebase -->
+
+
     <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
-    <!-- scriptBootstrap3.3.7 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!-- //newadd// -->
-    <link rel="stylesheet" type="text/css" href="cssstyle/style.css">
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/css.css">
+    <script src="css/css.css"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/login.js"></script>
-    <title></title>
 
 
 
+
+    <title>หน้าหลัก</title>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-inverse">
-        <button onclick="document.getElementById('formlogin').style.display='block'" style="width:auto;">Login</button>
-
-
-    </nav>
-
-    <div class="container-fluid">
-        <div class="row">
-            <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
-                <p>
-                    <h1>Status</h1>
-                </p>
-
-                <section class="row text-center placeholders">
-                    <div class="col-2 col-sm-3 placeholder">
-                        <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-                        <h4>S101</h4>
-                        <div class="text-muted">Something else</div>
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 well">
+                    <div class="from">
+                        <div class="well">
+                            <div class="login-from">
+                                <div class="tab-content">
+                                    <div id="login-tab" class="tab-from-group">
+                                        <form>
+                                            <div class="form-group">
+                                                <h3>Log In
+                                                    <hr>
+                                                </h3>
+                                                <label for="txt_email">Username</label>
+                                                <input type="email" class="form-control" id="txt-email" placeholder="Enter email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="txt_pass">Password</label>
+                                                <input type="password" class="form-control" id="txt-pass" placeholder="Password">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div id="logout-tap" class="tab-from-group" style="display: none;">
+                                        <div class="form-group">
+                                            <h3>Log Out
+                                                <hr>
+                                            </h3>
+                                            <p id="user-data"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button id="id-button" type="sign in" class="btn btn-default" onclick="check(this.BtnLogIn)">เข้าสู่ระบบ</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-2 col-sm-3 placeholder">
-                        <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-                        <h4>S102</h4>
-                        <span class="text-muted">Something else</span>
+                    <div class="well">
+                        <h3>
+                            กรุณาเลือกตึก
+                            <hr>
+                        </h3>
+                        <p>
+                            <a href="#">C</a>
+                        </p>
+                        <p>
+                            <a href="#">S</a>
+                        </p>
+                        <p>
+                            <a href="#">M</a>
+                        </p>
+
                     </div>
 
-                </section>
+                    <div class="well" </div>
 
-                <!-- //////div fromlog-in/////// -->
-                <div id="formlogin" class="modal">
-
-                    <form class="modal-content animate" action="/action_page.php">
-                        <div class="imgcontainer">
-                            <span onclick="document.getElementById('formlogin').style.display='none'" class="close" title="Close Modal">&times;</span>
-
-                        </div>
-
-                        <div class="container">
-                            <label><b>Username</b></label>
-                            <input type="text" placeholder="Enter Username" name="uname" required>
-
-                            <label><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" name="psw" required>
-
-                            <button type="submit">Login</button>
-                            <input type="checkbox" checked="checked"> Remember me
-                        </div>
-
-                        <div class="container" style="background-color:#f1f1f1">
-
-                            <span class="psw">Forgot <a href="#">password?</a></span>
-                        </div>
-                    </form>
-                </div>
-                <!-- //room open airandlight// -->
-                <div id="roomforopen" class="model">
-                    <span onclick="document.getElementById('roomforopen').style.display='none'" class="close" title="close Model">&time;</span>
+                    </div>
                 </div>
 
-                \
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8" a ng-href="page2.html">
+                            <div class="well" id="well-id">
+
+                                <h4>ตึก S </h4>
+                                <hr>
+
+                                <!--S101-->
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="well">
+
+                                            <h4>S101</span>
+
+                                            </h4>
+                                            <hr>
+                                            <h4>แสงสว่าง</h4>
+                                            </right>
+                                            <div>
+                                                <button id="button"></button>
+                                                <button id="button1" style="display:none"></button>
+                                            </div>
+                                            <br><br>
+                                            <h4>เครื่องปรับอากาศ </h4>
+                                            <div>
+                                                <button id="button"></button>
+                                                <button id="button1" style="display:none"></button>
+                                            </div>
+                                            <br>
+                                            <hr>จำนวนคน
+                                            <p id="userinRoomS101">0</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+
+                                    <!--S102-->
+                                    <div class="col-md-3">
+                                        <div class="well">
+                                            <h4>S102</h4>
+                                            </a>
+                                            <hr>
+                                            <h4>แสงสว่าง</h4>
+                                            </right>
+                                            <div>
+                                                <button id="button"></button>
+                                                <button id="button1" style="display:none"></button>
+                                            </div>
+                                            <br><br>
+                                            <h4>เครื่องปรับอากาศ </h4>
+                                            <div>
+                                                <button id="button"></button>
+                                                <button id="button1" style="display:none"></button>
+                                            </div>
+                                            <br>
+                                            <hr>จำนวนคน
+                                            <p id="userinRoomS102">0</p>
+                                            <hr>
+
+                                        </div>
+                                    </div>
+
+
+                                    <!--S103-->
+                                    <div class="col-md-3">
+                                        <div class="well">
+
+                                            <h4>S103</h4>
+                                            </a>
+                                            <hr>
+                                            <h4>แสงสว่าง</h4>
+                                            </right>
+                                            <div>
+                                                <button id="button"></button>
+                                                <button id="button1" style="display:none"></button>
+                                            </div>
+                                            <br><br>
+                                            <h4>เครื่องปรับอากาศ </h4>
+                                            <div>
+                                                <button id="button"></button>
+                                                <button id="button1" style="display:none"></button>
+                                            </div>
+                                            <br>
+                                            <hr>จำนวนคน
+                                            <p id="userinRoomS103">0</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+
+                                    <!--S104-->
+                                    <div class="col-md-3">
+                                        <div class="well">
+                                            <h4>S104</h4>
+                                            </a>
+                                            <hr>
+                                            <h4>แสงสว่าง</h4>
+                                            </right>
+                                            <div>
+
+                                                <button id="button"></button>
+                                                <button id="button1" style="display:none"></button>
+                                            </div>
+                                            <br><br>
+                                            <h4>เครื่องปรับอากาศ </h4>
+                                            <div>
+                                                <button id="button"></button>
+                                                <button id="button1" style="display:none"></button>
+                                            </div>
+                                            <br>
+                                            <hr>จำนวนคน
+                                            <p id="userinRoomS104">0</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="container-fluid">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="well" id="well-id" style="display: none;">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <nav aria-label="...">
+                                                <ul class="pager">
+                                                    <div class="well">
 
 
 
-        </div>
+                                                        <li class="previous">
+                                                            <a href="index.html" onclick="mySlide('previous');"> <span aria-hidden="true">&larr;</span>ย้อนกลับ</a>
+                                                        </li>
+
+
+                                                        <center>
+                                                            <h4 id="room">ห้อง S101 </h4>
+                                                        </center>
+
+
+                                                        <div class="row">
+                                                            <div id="container">
+                                                                <div class="col-lg-4">
+                                                                    <script src="js/highcharts.js" src="connectFirebase.js">
+                                                                        document.write('Highcharts');
+                                                                        document.write('current');
+                                                                    </script>
+
+                                                                </div>
+                                                            </div>
+
+                                                            <hr>
+
+                                                            <div class="col-lg-4">
+                                                                <img src="https://maxcdn.icons8.com/iOS7/PNG/100/Very_Basic/idea-100.png" title="Idea" width="100">
+                                                                <h4>แสงสว่าง</h4><br>
+                                                                <!--toggle button-->
+                                                                <label class="switch" id="Light_Row_one">
+                                                            <input onclick="Light_Row_one.set(+this.checked)"  type="checkbox" ><div class="slider round"></div></label><br>
+                                                            </div>
+                                                            <img src="https://maxcdn.icons8.com/iOS7/PNG/100/Household/air_conditioner-100.png" title="Air Conditioner" width="100">
+
+                                                            <h4>เครื่องปรับอากาศ</h4>
+                                                            <br>
+                                                            <!--toggle button-->
+
+                                                            <label class="switch" id="Airone">
+                                                                    <input onclick="addArr(1)"  type="checkbox" ><div class="slider round"></div> </label><br>
+                                                            <label class="switch" id="Airone">
+                                                                    <input onclick="addArr(2)"  type="checkbox" ><div class="slider round"></div> </label>
+
+                                                        </div>
+
+                                                    </div>
+                                        </div>
+
+                                    </div>
+                                    </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <script src="https://code.highcharts.com/highcharts.js"></script>
+                        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+                        <script src="js/jquery-3.2.0.min.js"></script>
+                        <script src="js/bootstrap.min.js"></script>
+                        <script src="js/connectFirebase.js"></script>
+                        <script src="js/login.js"></script>
+                        <script src="js/Queue.js"></script>
+
 
 </body>
 
